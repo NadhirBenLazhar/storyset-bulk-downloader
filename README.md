@@ -3,7 +3,7 @@ Download &amp; Change the Color of all Storyset SVG Illustrations
 
 ## Support Open Source
 1. `Star` and `Watch` this repository.
-2. `Follow `NadhirBenLazhar` everywhere.
+2. `Follow NadhirBenLazhar` everywhere.
 3. `Mention Storyset` in your projects.
 ```html
 <a href="https://storyset.com/">illustrations by Storyset</a>
@@ -110,7 +110,7 @@ node index.js
 ```
 
 ## Tips
-1. You can change the color and generate many color without downloading each time.
+1. You can change the color and generate many colors folder without run download each time.
 
 ## License
 - Read the `LICENSE` file.
