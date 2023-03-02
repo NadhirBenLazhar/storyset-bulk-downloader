@@ -11,7 +11,7 @@ Download &amp; Change the Color of all Storyset SVG Illustrations
 4. `Donate` to open source projects.
 
 ## Screenshot of results
-![](https://myoctocat.com/assets/images/base-octocat.svg)
+![](https://github.com/NadhirBenLazhar/storyset-bulk-downloader/raw/main/images/screenshot.png)
 
 
 
