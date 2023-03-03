@@ -54,11 +54,34 @@ async function changeToColor(theColor, theDir, theStyle) {
   await fs.promises.rm(`./data/${theColor}-${theStyle}`, { recursive: true, force: true })
   await fs.promises.mkdir(`./data/${theColor}-${theStyle}`)
   console.log('\neditFile: ')
+  let originalColror = ''
+  switch (theStyle) {
+    case 'rafiki':
+      originalColror = /#407BFF/g
+      break;
+    case 'bro':
+      originalColror = /#92E3A9/g
+      break;
+    case 'amico':
+      originalColror = /#BA68C8/g
+      break;
+    case 'pana':
+      originalColror = /#FF725E/g
+      break;
+    case 'cuate':
+      originalColror = /#FFC727/g
+      break;
+
+    default:
+      originalColror = /#000000/g
+      break;
+  }
+  console.log(originalColror)
   for (const [f, file] of files.entries()) {
     if (f >= 0) {
       process.stdout.write(`${f}, `)
       const data = await fs.promises.readFile(`./data/${theDir}-${theStyle}/${file}`, "utf8")
-      const newData = data.toString().replace(/#BA68C8/g, theColor.toString())
+      const newData = data.toString().replace(originalColror, theColor.toString())
       await fs.promises.writeFile(`./data/${theColor}-${theStyle}/${file}`, newData)
     }
   }
@@ -68,7 +91,7 @@ async function changeToColor(theColor, theDir, theStyle) {
   // default folder name
   const dir = 'original'
   // default style: rafiki, bro, amico, pana, cuate
-  const style = 'amico'
+  const style = 'pana'
   // run this first alone
   await fetchTotalFiles(dir, style)
   // run this second alone
