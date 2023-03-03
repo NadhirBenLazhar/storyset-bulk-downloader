@@ -91,11 +91,11 @@ async function changeToColor(theColor, theDir, theStyle) {
   // default folder name
   const dir = 'original'
   // default style: rafiki, bro, amico, pana, cuate
-  const style = 'pana'
-  // run this first alone
+  const style = 'cuate'
+  // run this first
   await fetchTotalFiles(dir, style)
-  // run this second alone
-  // await downloadFiles(dir, style)
-  // run this third alone
-  // await changeToColor('#f97316', dir, style)
+  // run this second
+  await downloadFiles(dir, style)
+  // run this third
+  await changeToColor('#f97316', dir, style)
 })()
