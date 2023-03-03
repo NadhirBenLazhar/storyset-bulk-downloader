@@ -48,44 +48,20 @@ code .
   // default style: rafiki, bro, amico, pana, cuate
   const style = 'amico'
 ```
-7. Comment other functions except `fetchTotalFiles`:
+7. Add your color `#f97316` to generate a set with the custom color:
 ```JS
-  // run this first alone
-  await fetchTotalFiles(dir, style)
-  // run this second alone
-  // await downloadFiles(dir, style)
-  // run this third alone
-  // await changeToColor('#f97316', dir, style)
-```
-8. Run the command to fetch all files array and store results in `.json` file:
-
-```bash
-node index.js
-```
-9. Comment other functions except `downloadFiles`:
-```JS
-  // run this first alone
-  // await fetchTotalFiles(dir, style)
-  // run this second alone
-  await downloadFiles(dir, style)
-  // run this third alone
-  // await changeToColor('#f97316', dir, style)
-```
-10. Run the command to download all svg files and store them in the chosen folder name:
-
-```bash
-node index.js
-```
-11. Comment other functions except `changeToColor`:
-```JS
-  // run this first alone
-  // await fetchTotalFiles(dir, style)
-  // run this second alone
-  // await downloadFiles(dir, style)
-  // run this third alone
   await changeToColor('#f97316', dir, style)
 ```
-12. Run the command to edit `svg` files color to chosen color and generate  a new set of files with the desired color:
+8. Run the command to start:
+
+```bash
+node index.js
+```
+
+## Functions
+- `fetchTotalFiles`: fetch all files links and store results in `.json` file.
+- `downloadFiles`: download all svg files and store them in the chosen folder name.
+- `changeToColor`: edit `svg` files color with chosen color and generate a new set.
 
 ```bash
 node index.js
