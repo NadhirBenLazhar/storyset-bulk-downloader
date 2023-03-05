@@ -40,7 +40,8 @@ async function downloadFiles(theDir, theStyle) {
       process.stdout.write(`${l}, `)
       try {
         const res = await axios.get(link.src, { responseType: "arraybuffer" });
-        await fs.promises.writeFile(`./data/${theDir}-${theStyle}/${l}.svg`, res.data);
+        const theName = `${link.illustration.slug}-${theStyle}-${link.id}`
+        await fs.promises.writeFile(`./data/${theDir}-${theStyle}/${theName}.svg`, res.data);
       } catch (error) {
         console.log('error: ' + error)
       }
@@ -91,7 +92,7 @@ async function changeToColor(theColor, theDir, theStyle) {
   // default folder name
   const dir = 'original'
   // default style: rafiki, bro, amico, pana, cuate
-  const style = 'cuate'
+  const style = 'amico'
   // run this first
   await fetchTotalFiles(dir, style)
   // run this second
